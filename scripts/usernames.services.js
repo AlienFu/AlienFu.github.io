@@ -14,7 +14,7 @@ Chegg.services.usernames = (function($) {
      * url to called
      *
      */
-    var api_url = "http://chegg-tutors.appspot.com/coding-challenge/api/user/";
+    var api_url = "//chegg-tutors.appspot.com/coding-challenge/api/user/";
 
 
     /**
@@ -43,7 +43,7 @@ Chegg.services.usernames = (function($) {
 
 
         /**
-         * return the promise so the componet can listen to it. 
+         * return the promise so the componet can listen to it.
          */
         return $.get(api_url, {
             username: check_names
