@@ -1,0 +1,48 @@
+.username-taken,
+.username-available {
+    display: inline-block;
+    line-height: 25px;
+    height: 25px;
+}
+
+.username-taken img,
+.username-available img {
+    width: 25px;
+    height: 25px;
+}
+.username-available .username {
+font-weight: bold;
+}
+.username-taken span,.username-available .text {
+  display: inline-block;
+  vertical-align: text-bottom;
+  line-height: 25px;
+  height: 25px;
+}
+
+check-results {
+    padding: 10px;
+    display: block;
+}
+error-text .icon {
+  width: 25px;
+  height: 25px;
+}
+error-text div{
+    padding: 10px;
+text-align: left;
+}
+
+suggestions ul {
+    list-style-type: none;
+}
+
+suggestions ul li {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+}
+
+suggestions ul li:hover {
+    background: #EFEFEF;
+}

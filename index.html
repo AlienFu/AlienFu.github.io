@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="http://chegg-tutors.appspot.com/public/styles.css" />
+    <link rel="stylesheet" type="text/css" href="/public/app.css" />
+    <title>Chegg Tutors Engineering</title>
+    <link rel="icon" type="image/x-icon" href="/public/img/chegg-favicon.ico" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/4.15.0/lodash.min.js"></script>
+    <script src="/public/app.js"></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="chg-balloon-logo-container">
+        <img src="http://chegg-tutors.appspot.com/public/img/logo.png" />
+    </div>
+    <div id="chg-balloon-controls-container">
+        <p>Enter a username to get started!</p>
+        <input id="chg-balloon-input" maxlength="2048" placeholder="e.g. BalloonMaster99" name="username" autocomplete="off" type="text" value="" />
+        <button id="chg-balloon-submit">Check availability</button>
+        <br>
+        <error-text></error-text>
+        <check-results>
+            <results-text></results-text>
+            <suggestions data-category="fantasy" data-limit="3"></suggestions>
+        </check-results>
+    </div>
+    <script type="template/lodash" id="user_suggestion_selection">
+        <li data-username="{{username}}">{{username}}</li>
+    </script>
+    <script type="template/lodash" id="username_available">
+        <div class="username-available">
+            <img class="icon" src="/public/images/green_check_mark.png">
+
+            <span class="text">
+    <span class="username">{{username}}</span> is avalaible.
+            </span>
+        </div>
+    </script>
+    <script type="template/lodash" id="error_text">
+        <div>
+            <img class="icon" src="/public/images/red_exclamation.png">
+
+            <span>
+{{text}}
+</span>
+        </div>
+
+    </script>
+    <script type="template/lodash" id="username_taken">
+        <div class="username-taken">
+            <img class="icon" src="/public/images/red_exclamation.png">
+
+            <span>
+{{username}} is not avalaible. How about one of these
+</span>
+        </div>
+    </script>
+    <script>
+        $(document).ready(function() {
+            Test = Chegg.component.CheckAvailbility($("#chg-balloon-controls-container"));
+        });
+    </script>
+
+</body>
+
+</html>
